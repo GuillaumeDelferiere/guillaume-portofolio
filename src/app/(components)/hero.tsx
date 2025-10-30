@@ -2,21 +2,22 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="container pt-20 pb-14 text-center">
+    <section className="container pt-20 text-center pb-14">
       <motion.h1
-        className="text-4xl md:text-5xl font-extrabold tracking-tight"
+        className="text-4xl font-extrabold tracking-tight md:text-5xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Guillaume — Étudiant en informatique
+        Guillaume Delferiere — Étudiant en informatique
       </motion.h1>
 
       <motion.p
-        className="mt-5 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+        className="max-w-2xl mx-auto mt-5 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -25,13 +26,17 @@ export default function Hero() {
       </motion.p>
 
       <motion.div
-        className="mt-8 flex justify-center gap-3"
+        className="flex justify-center gap-3 mt-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        <Link href="#projects" className="btn bg-[rgb(var(--brand))] text-white">Voir mes projets</Link>
-        <Link href="#contact" className="btn border border-neutral-200 dark:border-neutral-700">Me contacter</Link>
+        <Button asChild size="lg">
+          <Link href="#projects">Voir mes projets</Link>
+        </Button>
+        <Button asChild variant="outline" size="lg">
+          <Link href="#contact">Me contacter</Link>
+        </Button>
       </motion.div>
     </section>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from './(components)/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Guillaume Delferiere - Portfolio',
@@ -8,9 +9,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
-      <body className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
-        {children}
+    <html lang="fr" suppressHydrationWarning> { /* 👈 Ajout de suppressHydrationWarning */ }
+      <body>
+        {/* 👇 Entourer {children} avec le Provider */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

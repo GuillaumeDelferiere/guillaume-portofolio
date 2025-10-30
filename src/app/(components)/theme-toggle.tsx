@@ -1,36 +1,23 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-const getInitialTheme = (): 'light' | 'dark' => {
-  if (typeof window === 'undefined') return 'light';
-  const stored = localStorage.getItem('theme');
-  if (stored === 'dark' || stored === 'light') return stored;
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
-
-const applyTheme = (t: 'light' | 'dark') => {
-  if (t === 'dark') document.documentElement.classList.add('dark');
-  else document.documentElement.classList.remove('dark');
-  localStorage.setItem('theme', t);
-};
+import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button'; // 👈 Utiliser le bouton shadcn
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => getInitialTheme());
+  const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
-
-  const toggle = () => setTheme((s) => (s === 'light' ? 'dark' : 'light'));
+  const toggle = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   return (
-    <button
+    <Button
+      variant="ghost" // 👈 Utiliser les variantes shadcn
+      size="icon"     // 👈
       aria-label="Basculer le thème"
       onClick={toggle}
-      className="rounded-md border px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
     >
       {theme === 'light' ? '🌞' : '🌜'}
-    </button>
+    </Button>
   );
 }
