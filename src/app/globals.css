@@ -1,0 +1,56 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Design tokens / petites variables */
+:root{
+  --bg: 255 255 255;
+  --fg: 15 23 42;
+  --muted: 104 113 122;
+  --brand: 99 102 241;
+}
+
+/* Dark tokens */
+.dark {
+  --bg: 15 23 42;
+  --fg: 245 245 245;
+  --muted: 148 163 184;
+  --brand: 99 102 241;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+/* Small component scaffolding for shadcn-like look */
+.container {
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Card helper */
+.card {
+  background-color: color-mix(in srgb, rgb(var(--bg)) 90%, transparent);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+/* Tiny utility */
+.kicker { font-size: 0.85rem; color: rgb(var(--muted)); }
