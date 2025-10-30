@@ -1,8 +1,8 @@
 // src/app/(components)/projects.tsx
+
 "use client";
 import Section from './section';
 import { projects } from '@/lib/data';
-// 👇 Importer les composants Card
 import {
   Card,
   CardHeader,
@@ -11,14 +11,16 @@ import {
   CardContent,
   CardFooter,
 } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge'; // (voir étape suivante)
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button'; // 👈 1. Importer le bouton
+import { Github, ExternalLink } from 'lucide-react'; // 👈 2. Importer les icônes
+import Link from 'next/link'; // 👈 3. Importer Link de Next.js
 
 export default function Projects() {
   return (
     <Section id="projects" title="Projets">
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
-          // 👇 Remplacer <article className="p-5 card"> par <Card>
           <Card key={p.title} className="flex flex-col justify-between">
             <div>
               <CardHeader>
@@ -31,18 +33,28 @@ export default function Projects() {
                 <CardDescription className="mt-3 text-sm">{p.description}</CardDescription>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {p.tags.map((t) => (
-                    // 👇 Remplacer <span> par <Badge> (voir étape suivante)
                     <Badge key={t} variant="secondary">{t}</Badge>
                   ))}
                 </div>
               </CardContent>
             </div>
-            <CardFooter className="flex gap-3 mt-4 text-sm">
+
+            {/* 👇 4. Remplacer l'ancienne CardFooter par celle-ci */}
+            <CardFooter className="flex gap-2 mt-4">
               {p.link && (
-                <a className="underline" href={p.link} target="_blank" rel="noreferrer">Voir</a>
+                <Button asChild size="sm" variant="outline">
+                  <Link href={p.link} target="_blank" rel="noreferrer">
+                    <ExternalLink className="mr-2 size-4" />
+                    Voir
+                  </Link>
+                </Button>
               )}
               {p.repo && (
-                <a className="underline" href={p.repo} target="_blank" rel="noreferrer">Code</a>
+                <Button asChild size="icon" variant="ghost">
+                  <Link href={p.repo} target="_blank" rel="noreferrer" aria-label="Code (GitHub)">
+                    <Github className="size-5" />
+                  </Link>
+                </Button>
               )}
             </CardFooter>
           </Card>

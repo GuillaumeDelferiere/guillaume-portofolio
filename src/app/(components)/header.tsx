@@ -10,6 +10,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-4">
           <Link href="#skills" className="text-sm text-muted-foreground hover:underline">Compétences</Link>
+          <Link href="#formations" className="text-sm text-muted-foreground hover:underline">Formations</Link>
           <Link href="#projects" className="text-sm text-muted-foreground hover:underline">Projets</Link>
           <Link href="#contact" className="text-sm text-muted-foreground hover:underline">Contact</Link>
           <ThemeToggle />

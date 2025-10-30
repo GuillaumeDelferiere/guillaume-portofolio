@@ -13,7 +13,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Guillaume Delferiere — Étudiant en informatique
+        Guillaume Delferiere — Développeur junior full-stack
       </motion.h1>
 
       <motion.p
@@ -22,7 +22,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        Je conçois des interfaces modernes, performantes et accessibles. Curieux, rigoureux, orienté expérience utilisateur.
+        Je suis un développeur passionné actuellement en troisième année de bachelier en Technologies de l'Informatique à l'Ephec Louvain-La-Neuve.
       </motion.p>
 
       <motion.div
