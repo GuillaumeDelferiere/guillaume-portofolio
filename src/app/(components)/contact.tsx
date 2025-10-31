@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <Section id="contact" title="Contact">
       <p className="max-w-lg text-muted-foreground dark:text-gray-300">
-        Disponible pour un stage de fin d'études (février - mai 2026) ou d'autres opportunités. N'hésitez pas à me contacter via email ou à visiter mes profils GitHub et Instagram !
+        Je suis disponible pour un stage de fin d'études (février - mai 2026) ou d'autres opportunités. N'hésitez pas à me contacter via email ou à visiter mes profils GitHub et Instagram !
       </p>
 
       {/* Conteneur pour les boutons de contact/sociaux */}
