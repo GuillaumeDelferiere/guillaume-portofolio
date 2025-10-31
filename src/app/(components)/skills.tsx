@@ -41,7 +41,7 @@ export default function Skills() {
   const frontendSkills = ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "JavaScript", "HTML5", "CSS3"];
   const backendSkills = ["Node.js", "Express.js", "RESTful APIs", "SQL", "Python"];
   const toolsSkills = ["Git / CI", "Agile/Scrum", "Docker", "Git"];
-  const databaseSkills: string[] = ["Modèle Entité-Association", "Modèle relationnel", "SQL (MySQL, PostgreSQL)"];
+  const databaseSkills: string[] = ["Modèle Entité-Association", "Modèle relationnel", "PostgreSQL", "Supabase"];
   const softSkills: string[] = ["Travail en équipe", "Communication", "Résolution de problèmes", "Autonomie", "Adaptabilité"];
 
   // Helper pour styliser les icônes
