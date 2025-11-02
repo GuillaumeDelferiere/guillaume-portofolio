@@ -30,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Blog Personnel',
-    description: 'Développement d\'un site statique avec Hugo de blog personnel et déploiement sur Netlify pour partager des bilans mensuels.',
+    description: 'Développement d\'un site statique avec Hugo de blog personnel et déploiement sur Netlify pour partager des résumés de contenus culturels.',
     tags: ['Hugo', 'Netlify', 'Markdown'],
     link: 'https://bilan-mensuel-guillaume.netlify.app/',
     repo: 'https://github.com/GuillaumeDelferiere/Bilan-Mensuel',
