@@ -4,6 +4,7 @@
 import Section from './section';
 import { formations } from '@/lib/data'; // Importer les données
 import { GraduationCap } from 'lucide-react'; // Importer une icône
+import { motion } from 'framer-motion';
 
 export default function Formations() {
   return (
@@ -11,12 +12,15 @@ export default function Formations() {
       {/* On utilise une div pour créer un effet "timeline" simple */}
       <div className="flex flex-col gap-8 pl-6 border-l-2 border-border">
         {formations.map((formation) => (
-          <div
+          <motion.div
             key={formation.title}
             className="relative" // Conteneur pour le point de la timeline
           >
             {/* Le point sur la timeline */}
-            <div className="absolute -left-[34px] top-1.5 h-3 w-3 rounded-full bg-primary" />
+            {/* Nouveau point avec icône : */}
+          <div className="absolute -left-[42px] top-0.5 z-10 flex items-center justify-center p-2 rounded-full bg-background ring-8 ring-background md:-left-[44px]">
+            <GraduationCap className="size-5 text-primary" />
+          </div>
 
             {/* Contenu de la formation */}
             <p className="font-semibold text-muted-foreground">{formation.date}</p>
@@ -25,7 +29,7 @@ export default function Formations() {
             {formation.description && (
               <p className="mt-2 text-sm">{formation.description}</p>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </Section>

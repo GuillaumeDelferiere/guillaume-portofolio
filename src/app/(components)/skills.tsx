@@ -11,6 +11,25 @@ import {
   Users,
 } from 'lucide-react';
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05, // 👈 Délai entre chaque enfant
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 // Modifier le composant pour accepter une icône
 const SkillCategory = ({
@@ -20,20 +39,28 @@ const SkillCategory = ({
 }: {
   title: string;
   skills: string[];
-  icon: React.ReactNode; // Accepter un élément React (l'icône)
+  icon: React.ReactNode;
 }) => (
   <div>
     <h3 className="flex items-center gap-2 mb-3 text-lg font-semibold text-foreground">
-      {icon} {/* 👈 Afficher l'icône */}
+      {icon}
       {title}
     </h3>
-    <ul className="flex flex-wrap gap-2">
+    <motion.ul
+      className="flex flex-wrap gap-2"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible" 
+      viewport={{ once: true, amount: 0.2 }} 
+    >
       {skills.map((skill) => (
-        <Badge key={skill} variant="secondary" className="px-3 py-2 text-sm">
-          {skill}
-        </Badge>
+        <motion.li key={skill} variants={itemVariants}>
+          <Badge variant="secondary" className="px-3 py-2 text-sm">
+            {skill}
+          </Badge>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   </div>
 );
 

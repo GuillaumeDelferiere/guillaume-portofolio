@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from './(components)/theme-provider';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Guillaume Delferiere - Portfolio',
@@ -10,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" suppressHydrationWarning> { /* 👈 Ajout de suppressHydrationWarning */ }
-      <body>
+      <body className={inter.className}>
         {/* 👇 Entourer {children} avec le Provider */}
         <ThemeProvider
           attribute="class"

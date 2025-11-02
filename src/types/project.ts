@@ -5,4 +5,5 @@ export type Project = {
   link?: string;
   repo?: string;
   year?: string;
+  image?: string;
 };

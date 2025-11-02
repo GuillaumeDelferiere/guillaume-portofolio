@@ -8,14 +8,16 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
     link: 'https://guillaume-portofolio.vercel.app/#projects',
     repo: 'https://github.com/GuillaumeDelferiere/guillaume-portofolio',
-    year: '2025'
+    year: '2025',
+    image: '/projets/Portfolio.png'
   },
   {
     title: 'Bookworm',
     description: 'Développement d\'une application mobile de gestion de bibliothèque personnelle avec React Native dans le cadre d\'une summer school internationnale (Belgique, Danemark, Canada) à Toronto.',
     tags: ['React Native', 'TypeScript', 'Expo', 'Supabase'],
     repo: 'https://github.com/Simon-Fontaine/rnss25-group-7-simon-guillaume-rehat-mostafa',
-    year: '2025'
+    year: '2025',
+    image: '/projets/Bookworm.jpeg'
   },
   {
     title: 'Tablify',
@@ -23,7 +25,8 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TailwindCSS', 'Express.js', 'Node.js', 'PostgreSQL'],
     link: '',
     repo: 'https://github.com/Tablify-Developement/Tablify-Web/tree/production',
-    year: '2024'
+    year: '2024',
+    image: '/projets/Tablify.png'
   },
   {
     title: 'Blog Personnel',
@@ -31,7 +34,8 @@ export const projects: Project[] = [
     tags: ['Hugo', 'Netlify', 'Markdown'],
     link: 'https://bilan-mensuel-guillaume.netlify.app/',
     repo: 'https://github.com/GuillaumeDelferiere/Bilan-Mensuel',
-    year: '2025'
+    year: '2025',
+    image: '/projets/Bilan-Mensuel.png'
   }
 ];
 

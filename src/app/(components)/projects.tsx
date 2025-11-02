@@ -15,13 +15,30 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button'; // 👈 1. Importer le bouton
 import { Github, ExternalLink } from 'lucide-react'; // 👈 2. Importer les icônes
 import Link from 'next/link'; // 👈 3. Importer Link de Next.js
+import { motion } from 'framer-motion';
 
 export default function Projects() {
   return (
     <Section id="projects" title="Projets">
-      <div className="grid gap-6 md:grid-cols-2">
+      <motion.div className="grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
-          <Card key={p.title} className="flex flex-col justify-between">
+          <motion.div
+            key={p.title}
+            whileHover={{ y: -5}}
+            transition={{ type: 'spring', stiffness: 300, damping: 10}}
+          >
+          <Card key={p.title} className="flex flex-col justify-between group">
+            {p.image && (
+              <div className="overflow-hidden rounded-t-lg">
+                <div className="relative aspect-video">
+                  <img
+                    src={p.image}
+                    alt={`Aperçu du projet ${p.title}`}
+                    className="absolute inset-0 object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  />
+                </div>
+              </div>
+            )}
             <div>
               <CardHeader>
                 <div className="flex items-start justify-between">
@@ -58,8 +75,9 @@ export default function Projects() {
               )}
             </CardFooter>
           </Card>
+        </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Section>
   );
 }
