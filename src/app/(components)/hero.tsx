@@ -1,12 +1,9 @@
-// src/app/(components)/hero.tsx
-
 "use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-// Un petit composant pour les formes
 const AnimatedShape = ({
   className,
   animate,
@@ -18,7 +15,7 @@ const AnimatedShape = ({
     className={`absolute ${className}`}
     animate={animate}
     transition={{
-      duration: Math.random() * 5 + 7, // Durée aléatoire
+      duration: Math.random() * 5 + 7,
       repeat: Infinity,
       repeatType: "reverse",
       ease: "easeInOut",
@@ -28,17 +25,13 @@ const AnimatedShape = ({
 
 export default function Hero() {
   return (
-    // Ajout de relative et overflow-hidden ici
     <section className="container relative pt-20 overflow-hidden text-center pb-14">
-      {/* 1. Conteneur pour le dégradé et les formes */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
       >
-        {/* 2. Le dégradé subtil */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-accent/20 to-transparent" />
 
-        {/* 3. Les formes géométriques flottantes */}
         <AnimatedShape
           className="rounded-full top-1/4 left-1/4 size-16 bg-primary/20"
           animate={{ x: [-20, 20], y: [-10, 10] }}

@@ -1,16 +1,13 @@
-// src/app/(components)/section.tsx
-
 "use client";
 import { motion, Variants, Transition } from 'framer-motion';
 import { ReactNode } from 'react';
 
-// 1. Définir les variants pour l'animation des lettres
 const titleVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.03, // Délai entre chaque lettre
+      staggerChildren: 0.03, 
     },
   },
 };
@@ -39,12 +36,11 @@ export default function Section({
   title: string;
   children: ReactNode;
 }) {
-  // 2. Diviser le titre en lettres
+  
   const letters = Array.from(title);
 
   return (
     <section id={id} className="container py-16">
-      {/* 3. Appliquer les variants au conteneur h2 */}
       <motion.h2
         className="text-2xl font-semibold tracking-tight md:text-3xl"
         variants={titleVariants}
@@ -52,12 +48,10 @@ export default function Section({
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* 4. Mapper chaque lettre dans un span animé */}
         {letters.map((letter, index) => (
           <motion.span
             key={index}
             variants ={letterVariants}
-            // Gérer les espaces
             style={{ display: letter === ' ' ? 'inline' : 'inline-block' }} 
           >
             {letter}
@@ -65,7 +59,6 @@ export default function Section({
         ))}
       </motion.h2>
       
-      {/* L'animation du contenu reste la même */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -1,28 +1,21 @@
-// src/app/(components)/formations.tsx
-
 "use client";
 import Section from './section';
-import { formations } from '@/lib/data'; // Importer les données
-import { GraduationCap } from 'lucide-react'; // Importer une icône
+import { formations } from '@/lib/data'; 
+import { GraduationCap } from 'lucide-react'; 
 import { motion } from 'framer-motion';
 
 export default function Formations() {
   return (
     <Section id="formations" title="Formations">
-      {/* On utilise une div pour créer un effet "timeline" simple */}
       <div className="flex flex-col gap-8 pl-6 border-l-2 border-border">
         {formations.map((formation) => (
           <motion.div
             key={formation.title}
-            className="relative" // Conteneur pour le point de la timeline
+            className="relative"
           >
-            {/* Le point sur la timeline */}
-            {/* Nouveau point avec icône : */}
           <div className="absolute -left-[42px] top-0.5 z-10 flex items-center justify-center p-2 rounded-full bg-background ring-8 ring-background md:-left-[44px]">
             <GraduationCap className="size-5 text-primary" />
           </div>
-
-            {/* Contenu de la formation */}
             <p className="font-semibold text-muted-foreground">{formation.date}</p>
             <h3 className="mt-1 text-lg font-semibold text-foreground">{formation.title}</h3>
             <p className="text-muted-foreground">{formation.school}</p>

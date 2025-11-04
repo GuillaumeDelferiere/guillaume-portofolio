@@ -1,10 +1,8 @@
-// src/app/(components)/footer.tsx
-
 import Link from "next/link";
-import { Github, Instagram } from "lucide-react"; // 1. Importer les icônes
+import { Github, Instagram } from "lucide-react"; 
 import { Button } from "@/components/ui/button";
 
-// 2. Récupérer les mêmes URLs que dans votre page contact
+
 const githubUrl = "https://github.com/GuillaumeDelferiere";
 const instagramUrl = "https://www.instagram.com/guillaumedelferiere/";
 
@@ -16,8 +14,6 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Guillaume Delferiere. Tous droits réservés.</p>
           <p className="kicker">Fait avec Next.js, Tailwind et Framer Motion</p>
         </div>
-        
-        {/* 3. Ajouter les icônes sociales */}
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" size="icon" aria-label="GitHub">
             <Link href={githubUrl} target="_blank" rel="noreferrer">

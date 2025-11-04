@@ -1,5 +1,3 @@
-// src/app/(components)/projects.tsx
-
 "use client";
 import Section from './section';
 import { projects } from '@/lib/data';
@@ -12,9 +10,9 @@ import {
   CardFooter,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button'; // 👈 1. Importer le bouton
-import { Github, ExternalLink } from 'lucide-react'; // 👈 2. Importer les icônes
-import Link from 'next/link'; // 👈 3. Importer Link de Next.js
+import { Button } from '@/components/ui/button'; 
+import { Github, ExternalLink } from 'lucide-react'; 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Projects() {
@@ -55,8 +53,7 @@ export default function Projects() {
                 </div>
               </CardContent>
             </div>
-
-            {/* 👇 4. Remplacer l'ancienne CardFooter par celle-ci */}
+            
             <CardFooter className="flex gap-2 mt-4">
               {p.link && (
                 <Button asChild size="sm" variant="outline">

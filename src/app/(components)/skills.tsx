@@ -1,7 +1,6 @@
 "use client";
 import Section from './section';
 import { Badge } from '@/components/ui/badge';
-// 👇 Importer les icônes
 import {
   Code,
   Database,
@@ -18,7 +17,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05, // 👈 Délai entre chaque enfant
+      staggerChildren: 0.05, 
     },
   },
 };
@@ -31,7 +30,7 @@ const itemVariants = {
   },
 };
 
-// Modifier le composant pour accepter une icône
+
 const SkillCategory = ({
   title,
   skills,
@@ -71,9 +70,9 @@ export default function Skills() {
   const databaseSkills: string[] = ["Modèle Entité-Association", "Modèle relationnel", "PostgreSQL", "Supabase"];
   const softSkills: string[] = ["Travail en équipe", "Communication", "Résolution de problèmes", "Autonomie", "Adaptabilité"];
 
-  // Helper pour styliser les icônes
+  
   const iconProps = {
-    className: 'size-5 text-muted-foreground', // Utiliser une couleur discrète
+    className: 'size-5 text-muted-foreground', 
     strokeWidth: 2,
   };
 

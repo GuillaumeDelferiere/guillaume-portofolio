@@ -1,15 +1,13 @@
-// src/app/(components)/contact.tsx
-
 "use client";
 import Section from './section';
 import { Button } from '@/components/ui/button';
 import { Github, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 
-// --- Mettez vos informations à jour ici ---
+
 const email = "guigui.delferiere@gmail.com";
-const githubUrl = "https://github.com/GuillaumeDelferiere"; // 👈 Mettez votre lien GitHub ici
-const instagramUrl = "https://www.instagram.com/guillaumedelferiere/"; // 👈 Mettez votre lien Instagram ici
+const githubUrl = "https://github.com/GuillaumeDelferiere"; 
+const instagramUrl = "https://www.instagram.com/guillaumedelferiere/"; 
 // ------------------------------------------
 
 export default function Contact() {

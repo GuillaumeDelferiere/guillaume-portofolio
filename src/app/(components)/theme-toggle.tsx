@@ -1,7 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button'; // 👈 Utiliser le bouton shadcn
+import { Button } from '@/components/ui/button'; 
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -12,8 +12,8 @@ export default function ThemeToggle() {
 
   return (
     <Button
-      variant="ghost" // 👈 Utiliser les variantes shadcn
-      size="icon"     // 👈
+      variant="ghost" 
+      size="icon"     
       aria-label="Basculer le thème"
       onClick={toggle}
     >
