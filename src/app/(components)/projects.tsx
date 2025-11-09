@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react'; 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Projects() {
   return (
@@ -29,10 +30,12 @@ export default function Projects() {
             {p.image && (
               <div className="overflow-hidden rounded-t-lg">
                 <div className="relative aspect-video">
-                  <img
+                  <Image
                     src={p.image}
                     alt={`Aperçu du projet ${p.title}`}
-                    className="absolute inset-0 object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>

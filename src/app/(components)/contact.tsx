@@ -1,7 +1,7 @@
 "use client";
 import Section from './section';
 import { Button } from '@/components/ui/button';
-import { Github, Instagram, Mail } from 'lucide-react';
+import { Download, Github, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 
@@ -24,6 +24,14 @@ export default function Contact() {
           <Link href={`mailto:${email}`}>
             <Mail className="mr-2 size-5" />
             {email}
+          </Link>
+        </Button>
+
+        {/* Bouton CV */}
+        <Button asChild size="lg" variant="outline">
+          <Link href="/CV_Guillaume.pdf" download>
+            <Download className="mr-2 size-5" />
+              Télécharger mon CV
           </Link>
         </Button>
 
