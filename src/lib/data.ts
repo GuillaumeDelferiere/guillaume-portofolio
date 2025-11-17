@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Portfolio Personnel',
     description: 'Développement d\'un site web personnel avec Next.js et Tailwind CSS pour présenter mes projets, compétences et expériences professionnelles.',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
-    link: 'https://guillaume-portofolio.vercel.app/#projects',
+    link: 'https://www.guillaume-delferiere.be',
     repo: 'https://github.com/GuillaumeDelferiere/guillaume-portofolio',
     year: '2025',
     image: '/projets/Portfolio.png'
