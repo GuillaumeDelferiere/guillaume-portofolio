@@ -5,7 +5,7 @@ import { Download, Github, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 
-const email = "guigui.delferiere@gmail.com";
+const email = "contact@guillaume-delferiere.be";
 const githubUrl = "https://github.com/GuillaumeDelferiere"; 
 const instagramUrl = "https://www.instagram.com/guillaumedelferiere/"; 
 // ------------------------------------------
