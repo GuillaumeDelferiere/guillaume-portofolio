@@ -13,6 +13,7 @@ export default function Header() {
           <Link href="#formations" className="text-sm text-muted-foreground hover:underline">Formations</Link>
           <Link href="#projects" className="text-sm text-muted-foreground hover:underline">Projets</Link>
           <Link href="#contact" className="text-sm text-muted-foreground hover:underline">Contact</Link>
+          <Link href="/ephec" className="text-sm text-muted-foreground hover:underline">Ephec</Link>
           <ThemeToggle />
         </div>
       </nav>

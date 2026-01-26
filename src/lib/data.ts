@@ -65,3 +65,9 @@ export const formations: Formation[] = [
     description: 'Option Latin jusqu\'en 4e année et Mathématiques/Sciences fortes en 5e et 6e année. Immersion anglaise durant toute la scolarité.',
   },
 ];
+export const ephecActivities = [
+  { activity: "Cours de Développement Web", hours: 40 },
+  { activity: "Projet de Base de Données", hours: 25 },
+  { activity: "Sécurité Informatique", hours: 15 },
+  // Ajoutez vos activités ici
+];
