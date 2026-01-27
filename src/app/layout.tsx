@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.guillaume-delferiere.be'),
   title: 'Guillaume Delferiere - Portfolio',
   description: 'Étudiant en informatique et développeur web full-stack. Projets, compétences et contact.',
   openGraph: {
