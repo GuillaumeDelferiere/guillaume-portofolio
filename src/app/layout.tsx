@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Guillaume Delferiere - Portfolio',
     description: 'Étudiant en informatique et développeur web full-stack.',
-    url: 'https://www.guillaume-delferiere.be',
+    url: 'https://www.guillaume-delferiere.be/opengraph-image.png',
     siteName: 'Guillaume Delferiere Portfolio',
     images: [
       {

@@ -68,7 +68,7 @@ export default function Skills() {
   const backendSkills = ["Node.js", "Express.js", "RESTful APIs", "SQL", "Python"];
   const toolsSkills = ["Git / CI", "Agile/Scrum", "Docker", "Git"];
   const databaseSkills: string[] = ["Modèle Entité-Association", "Modèle relationnel", "PostgreSQL", "Supabase"];
-  const softSkills: string[] = ["Travail en équipe", "Communication", "Résolution de problèmes", "Autonomie", "Adaptabilité"];
+  const softSkills: string[] = ["Anglais Avancé", "Travail en équipe", "Communication", "Résolution de problèmes", "Autonomie", "Adaptabilité"];
 
   
   const iconProps = {
