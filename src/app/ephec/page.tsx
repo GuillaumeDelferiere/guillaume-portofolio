@@ -11,6 +11,7 @@ export default function EphecPage() {
           <table className="w-full text-left">
             <thead className="bg-neutral-100 dark:bg-neutral-900">
               <tr>
+                <th className="p-4 font-semibold">Thème</th>
                 <th className="p-4 font-semibold">Activité</th>
                 <th className="p-4 font-semibold">Heures passées</th>
               </tr>
@@ -18,11 +19,19 @@ export default function EphecPage() {
             <tbody className="divide-y dark:divide-neutral-800">
               {ephecActivities.map((item, index) => (
                 <tr key={index} className="hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                  <td className="p-4">{item.theme}</td>
                   <td className="p-4">{item.activity}</td>
                   <td className="p-4">{item.hours}h</td>
                 </tr>
               ))}
             </tbody>
+            <tfoot className="bg-neutral-100 dark:bg-neutral-900">
+              <tr>
+                <th className="p-4 font-semibold">Total</th>
+                <th className="p-4 font-semibold"></th>
+                <th className="p-4 font-semibold">60h</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </main>

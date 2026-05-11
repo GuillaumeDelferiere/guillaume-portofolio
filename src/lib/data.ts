@@ -65,9 +65,16 @@ export const formations: Formation[] = [
     description: 'Option Latin jusqu\'en 4e année et Mathématiques/Sciences fortes en 5e et 6e année. Immersion anglaise durant toute la scolarité.',
   },
 ];
+
 export const ephecActivities = [
-  { activity: "Cours de Développement Web", hours: 40 },
-  { activity: "Projet de Base de Données", hours: 25 },
-  { activity: "Sécurité Informatique", hours: 15 },
+  { theme:"Créativité et Développement", activity: "Conception et développement d'un site anniversaire", hours: 10 },
+  { theme:"Déploiement et Génération de sites statiques", activity: "Développement et mise en ligne d'un blog personnel", hours: 10 },
+  { theme:"Élargissement compétences Frontend Mobile", activity: "Réalisation complète du tutoriel expo", hours: 10 },
+  { theme:"Logique de programmation et Backend", activity: "Tutorat d'une connaissance en Python", hours: 5},
+  { theme:"Pédagogie et communication", activity: "Tutorat d'une élève de l'Ephec pour son cours de Math", hours: 7.5},
+  { theme:"Compréhension de l'architecture matérielle", activity: "Montage, Démontage et entretien hardware d'un PC", hours: 10},
+  { theme:"Activité extra-scolaire", activity: "Chef scout", hours: 10}, 
+  { theme:"Introduction au monde professionnel", activity:"Visite de l'entreprise Odoo Louvain-La-Neuve", hours: 4},
+  { theme: "Introduction à la cybersécurité", activity: "Conférence sur la cybersécurité organisée par l'Ephec", hours: 1.5}
   // Ajoutez vos activités ici
 ];
