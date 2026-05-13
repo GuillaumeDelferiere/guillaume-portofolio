@@ -66,7 +66,7 @@ export default function EphecPage() {
               <tfoot className="bg-neutral-50 dark:bg-neutral-900">
                 <tr>
                   <th className="p-4 font-semibold">Total</th>
-                  <th className="p-4 font-semibold text-right">60h</th>
+                  <th className="p-4 font-semibold text-right">68h</th>
                 </tr>
               </tfoot>
             </table>
@@ -99,8 +99,15 @@ export default function EphecPage() {
                     </div>
                   </div>
                   <div className="flex gap-4 pt-4 border-t dark:border-neutral-800">
-                    <a href={item.link} target="_blank" className="text-xs font-semibold text-blue-500 hover:underline">Voir le projet →</a>
-                    <a href={item.repo} target="_blank" className="text-xs font-semibold text-blue-500 hover:underline">Code source →</a>
+                    {item.link && (
+                      <a href={item.link} target="_blank" className="text-xs font-semibold text-blue-500 hover:underline">Voir le projet →</a>
+                    )}
+                    {item.repo && (
+                      <a href={item.repo} target="_blank" className="text-xs font-semibold text-blue-500 hover:underline">Code source →</a>
+                    )}
+                    {item.proof && (
+                      <a href={item.proof} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-green-600 hover:underline">Preuve →</a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
