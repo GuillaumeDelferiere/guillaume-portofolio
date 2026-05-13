@@ -36,10 +36,35 @@ export const projects: Project[] = [
     repo: 'https://github.com/GuillaumeDelferiere/Bilan-Mensuel',
     year: '2025',
     image: '/projets/Bilan-Mensuel.png'
-  }
+  }, 
+  {
+    title: 'Serresurmesure.be',
+    description: "Développement d'un site pour la vente de serre sur mesure de l'entreprise Atelier Heymans à l'aide de l'outil Wordpress et déploiement via OVH.",
+    tags: ['Wordpress', 'OVH', 'Astra', 'Elementor'],
+    link: 'https://www.serresurmesure.be/',
+    repo: '',
+    year: '2026',
+    image: '/projets/serresurmesure.webp'
+  }, 
+  {
+    title: 'Studio Heymans',
+    description: "Développement et déploiement d'un site vitrine pour la promotion d'événement pour le studio d'enregistrement de l'entreprise Atelier Heymans via l'outil Hostinger.",
+    tags: ['Hostinger', 'Design', 'UI'],
+    link: 'https://echovif-builder-endrlibq21xcalox.hostingersite.com',
+    repo: '',
+    year: '2026',
+    image: '/projets/studioHeymans.webp'
+  },
+  
 ];
 
 export const formations: Formation[] = [
+  {
+    title: "Stage",
+    school: "Atelier Heymans",
+    date: "Février - Mai 2026",
+    description: "Stage de 3 mois dans l'entreprise Atelier Heymans dans le cadre de mon bachelier en Technologies de l'Informatique. Développement de plusieurs sites web pour l'activité économique de l'entreprise Atelier Heymans."
+  },
   {
     title: 'Bachelier en Technologies de l\'Informatique',
     school: 'Ephec Louvain-La-Neuve',
@@ -63,7 +88,7 @@ export const formations: Formation[] = [
     school: 'Institut de l\'Enfant-Jésus, Nivelles',
     date: '2014 - 2020',
     description: 'Option Latin jusqu\'en 4e année et Mathématiques/Sciences fortes en 5e et 6e année. Immersion anglaise durant toute la scolarité.',
-  },
+  }
 ];
 
 export const professionalProject = {

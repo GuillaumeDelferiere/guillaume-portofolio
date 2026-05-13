@@ -11,9 +11,10 @@ export default function Header() {
   
   const navLinks = [
     { name: 'Accueil', href: '/' },
+    { name: 'Formations', href: '/#formations'},
     { name: 'Projets', href: '/#projects' },
-    { name: 'Portfolio EPHEC', href: '/ephec' },
     { name: 'Contact', href: '/#contact' },
+    { name: 'Portfolio EPHEC', href: '/ephec' },
   ];
 
   return (
