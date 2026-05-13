@@ -17,7 +17,7 @@ export default function ThemeToggle() {
       aria-label="Basculer le thème"
       onClick={toggle}
     >
-      {theme === 'light' ? '🌞' : '🌜'}
+      {theme === 'light' ? '🌜' : '🌞'}
     </Button>
   );
 }
